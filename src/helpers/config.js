@@ -1,6 +1,6 @@
 import axois from "axios"
 export const jwt = localStorage.getItem("jwt")
-export const API_BASE_URL = "http://localhost:3000"
+export const API_BASE_URL = "https://nest-backend-hkem.onrender.com"
 export const api = axois.create({
     baseURL: API_BASE_URL,
     headers:{
