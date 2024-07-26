@@ -30,6 +30,7 @@ const AddVideoForm = () => {
       
     })
     try {
+      console.log(videoData)
       const data = await axios.post(`${API_BASE_URL}/video/create`,videoData, config)
     console.log(data)
     toast.success("Create video success", {position:"top-center"})
