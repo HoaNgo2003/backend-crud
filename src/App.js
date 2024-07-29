@@ -13,6 +13,8 @@ import PrivateRoute from './components/admin/Pages/PrivateRoute';
 import PublicRoute from './components/admin/Pages/PublicRoute';
 import LayoutDefault from './components/admin/Pages/LayoutDefault';
 import 'react-toastify/dist/ReactToastify.css'
+import Home from './components/client/Pages/Home';
+import Video from './components/client/Pages/VideoList';
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
       <Routes>
         <Route element={<LayoutDefault/>}>
         <Route element={<PublicRoute />}>
+          <Route element={<Home/>}>
+            <Route path='/home' element={<Video/>}/>
+          </Route>
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Register />} />
         </Route>
